@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Chess with Gri</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/d5051cf351.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="chessboard">
+    <!-- 64 squares (8x8 grid) -->
+    <div class="square" id="A8"><i class="fa-regular fa-chess-rook" draggable="true"></i></div>
+    <div class="square" id="B8"><i class="fa-regular fa-chess-knight" draggable="true"></i></div>
+    <div class="square" id="C8"><i class="fa-regular fa-chess-bishop" draggable="true"></i></div>
+    <div class="square" id="D8"><i class="fa-regular fa-chess-queen" draggable="true"></i></div>
+    <div class="square" id="E8"><i class="fa-regular fa-chess-king" draggable="true"></i></div>
+    <div class="square" id="F8"><i class="fa-regular fa-chess-bishop" draggable="true"></i></div>
+    <div class="square" id="G8"><i class="fa-regular fa-chess-knight" draggable="true"></i></div>
+    <div class="square" id="H8"><i class="fa-regular fa-chess-rook" draggable="true"></i></div>
+
+    <div class="square" id="A7"><i class="fa-regular fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="B7"><i class="fa-regular fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="C7"><i class="fa-regular fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="D7"><i class="fa-regular fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="E7"><i class="fa-regular fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="F7"><i class="fa-regular fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="G7"><i class="fa-regular fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="H7"><i class="fa-regular fa-chess-pawn" draggable="true"></i></div>
+
+    <div class="square" id="A6"></div>
+    <div class="square" id="B6"></div>
+    <div class="square" id="C6"></div>
+    <div class="square" id="D6"></div>
+    <div class="square" id="E6"></div>
+    <div class="square" id="F6"></div>
+    <div class="square" id="G6"></div>
+    <div class="square" id="H6"></div>
+
+    <div class="square" id="A5"></div>
+    <div class="square" id="B5"></div>
+    <div class="square" id="C5"></div>
+    <div class="square" id="D5"></div>
+    <div class="square" id="E5"></div>
+    <div class="square" id="F5"></div>
+    <div class="square" id="G5"></div>
+    <div class="square" id="H5"></div>
+
+    <div class="square" id="A4"></div>
+    <div class="square" id="B4"></div>
+    <div class="square" id="C4"></div>
+    <div class="square" id="D4"></div>
+    <div class="square" id="E4"></div>
+    <div class="square" id="F4"></div>
+    <div class="square" id="G4"></div>
+    <div class="square" id="H4"></div>
+
+    <div class="square" id="A3"></div>
+    <div class="square" id="B3"></div>
+    <div class="square" id="C3"></div>
+    <div class="square" id="D3"></div>
+    <div class="square" id="E3"></div>
+    <div class="square" id="F3"></div>
+    <div class="square" id="G3"></div>
+    <div class="square" id="H3"></div>
+
+    <div class="square" id="A2"><i class="fa-solid fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="B2"><i class="fa-solid fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="C2"><i class="fa-solid fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="D2"><i class="fa-solid fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="E2"><i class="fa-solid fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="F2"><i class="fa-solid fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="G2"><i class="fa-solid fa-chess-pawn" draggable="true"></i></div>
+    <div class="square" id="H2"><i class="fa-solid fa-chess-pawn" draggable="true"></i></div>
+
+    <div class="square" id="A1"><i class="fa-solid fa-chess-rook" draggable="true"></i></div>
+    <div class="square" id="B1"><i class="fa-solid fa-chess-knight" draggable="true"></i></div>
+    <div class="square" id="C1"><i class="fa-solid fa-chess-bishop" draggable="true"></i></div>
+    <div class="square" id="D1"><i class="fa-solid fa-chess-queen" draggable="true"></i></div>
+    <div class="square" id="E1"><i class="fa-solid fa-chess-king" draggable="true"></i></div>
+    <div class="square" id="F1"><i class="fa-solid fa-chess-bishop" draggable="true"></i></div>
+    <div class="square" id="G1"><i class="fa-solid fa-chess-knight" draggable="true"></i></div>
+    <div class="square" id="H1"><i class="fa-solid fa-chess-rook" draggable="true"></i></div>
+
+  </div>
+
+  
+  <script src="script.js"></script>
+
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+  <script>
+    const squares = document.querySelectorAll('.square');
+    let draggedPiece = null;
+
+    squares.forEach(square => {
+      square.addEventListener('dragstart', event => {
+        draggedPiece = event.target;
+      });
+
+      square.addEventListener('dragover', event => {
+        event.preventDefault();
+      });
+
+      square.addEventListener('drop', event => {
+        event.preventDefault();
+        if (!event.target.querySelector('.fa-chess-piece') && draggedPiece) {
+          event.target.appendChild(draggedPiece);
+          draggedPiece = null;
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

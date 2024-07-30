@@ -1,0 +1,151 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  background-image: url("chessb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 80vmin;
+  height: 80vmin;
+  border: 4vmin solid #a55a2c;
+  box-shadow: 0 0 20px rgb(3, 3, 3, 0.5);
+}
+.square {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 3.5vmin;
+}
+.square:nth-child(8n + 1), .square:nth-child(8n + 3), .square:nth-child(8n + 5), .square:nth-child(8n + 7) {
+  /* background-color: #f0d9b5; */
+  background-image: url("light.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.square:nth-child(8n + 2),.square:nth-child(8n + 4), .square:nth-child(8n + 6), .square:nth-child(8n + 8) {
+  /* background-color: #b58863; */
+  background-image: url("dark.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.square:nth-child(8n + 9), .square:nth-child(8n + 11), .square:nth-child(8n + 13), .square:nth-child(8n + 15) {
+  /* background-color: #b58863; */
+  background-image: url("dark.JPG");
+  background-position: center;
+  background-repeat: no-repeat;  
+  background-size: cover;
+} 
+.square:nth-child(8n + 10), .square:nth-child(8n + 12), .square:nth-child(8n + 14),.square:nth-child(8n + 16) {
+  /* background-color: #f0d9b5; */
+  background-image: url("light.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.square:nth-child(8n + 17), .square:nth-child(8n + 19), .square:nth-child(8n + 21), .square:nth-child(8n + 23) {
+  /* background-color: #f0d9b5; */
+  background-image: url("light.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+.square:nth-child(8n + 18), .square:nth-child(8n + 20), .square:nth-child(8n + 22),.square:nth-child(8n + 24) {
+  /* background-color: #b58863; */
+  background-image: url("dark.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.square:nth-child(8n + 25), .square:nth-child(8n + 27), .square:nth-child(8n + 29), .square:nth-child(8n + 31) {
+  /* background-color: #b58863; */
+  background-image: url("dark.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+.square:nth-child(8n + 26), .square:nth-child(8n + 28), .square:nth-child(8n + 30),.square:nth-child(8n + 32) {
+  /* background-color: #f0d9b5; */
+  background-image: url("light.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.square:nth-child(8n + 33), .square:nth-child(8n + 35), .square:nth-child(8n + 37), .square:nth-child(8n + 39) {
+  /* background-color: #f0d9b5; */
+  background-image: url("light.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+.square:nth-child(8n + 34), .square:nth-child(8n + 36), .square:nth-child(8n + 38),.square:nth-child(8n + 40) {
+  /* background-color: #b58863; */
+  background-image: url("dark.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.square:nth-child(8n + 41), .square:nth-child(8n + 43), .square:nth-child(8n + 45), .square:nth-child(8n + 47) {
+  /* background-color: #b58863; */
+  background-image: url("dark.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+.square:nth-child(8n + 42), .square:nth-child(8n + 44), .square:nth-child(8n + 46),.square:nth-child(8n + 48) {
+  /* background-color: #f0d9b5; */
+  background-image: url("light.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.square:nth-child(8n + 49), .square:nth-child(8n + 51), .square:nth-child(8n + 53), .square:nth-child(8n + 55) {
+  /* background-color: #f0d9b5; */
+  background-image: url("light.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+.square:nth-child(8n + 50), .square:nth-child(8n + 52), .square:nth-child(8n + 54),.square:nth-child(8n + 56) {
+  /* background-color: #b58863; */
+  background-image: url("dark.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.square:nth-child(8n + 57), .square:nth-child(8n + 59), .square:nth-child(8n + 61), .square:nth-child(8n + 63) {
+  /* background-color: #b58863; */
+  background-image: url("dark.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+.square:nth-child(8n + 58), .square:nth-child(8n + 60), .square:nth-child(8n + 62),.square:nth-child(8n + 64) {
+  /* background-color: #f0d9b5; */
+  background-image: url("light.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.square .fa-chess-pawn, .square .fa-chess-rook, .square .fa-chess-knight, .square .fa-chess-bishop, .square .fa-chess-queen, .square .fa-chess-king {
+  cursor: pointer;
+}
+
